@@ -1,0 +1,67 @@
+﻿<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <title>Blobfish Support Group</title>
+    <style>
+    h1{
+        font-family: 'Press Start 2P', cursive;
+        color: white;
+        text-align: center;
+        margin: 30 px;
+    }
+            
+    p{
+        font-size: 40px;
+        color: white;
+        margin: 10px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+            
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border: 15px solid white;
+        border-radius: 30px;
+        width: 40%;
+    }
+            
+    form{
+        font-size: 30px;
+        display: inline;
+        color: hotpink
+    }
+            
+   body{
+        background: -webkit-linear-gradient(left, #2ddce2 0%,#8995ff 100%);
+        }
+    button, input{
+        background-color: #FFF;
+    }
+
+    </style>
+</head>
+    <body>
+        <h1>Blobfish Support Group</h1>
+        <img src="@Model.sourceOfImage" style="width:500px;height:500px;"/>
+        <p>This is @Model.nameOfCreature. He is currently eating @Model.toEat and washing it down with some @Model.toDrink.</p>
+            <form action="cool" method="post">
+                <input type="submit" value="@Model.knownTricks[0]">
+            </form>
+            <form action="die" method="post">
+                <input type="submit" value="@Model.knownTricks[1]">
+            </form>
+            <form action="sad" method="post">
+                <input type="submit" value="@Model.knownTricks[2]">
+            </form>
+            <form action="listen" method="post">
+                <input type="submit" value="@Model.knownTricks[3]">
+            </form>
+        <br>
+         <form action="nutritionStore" method="get">
+                <input type="submit" value="Go to Nutrition Store">
+            </form>
+    </body>
+</html>

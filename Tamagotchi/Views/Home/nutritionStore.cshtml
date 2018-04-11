@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+            <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <style>
+    h1{
+        font-family: 'Press Start 2P', cursive;
+        color: white;
+        text-align: center;
+        margin: 30 px;
+    }
+
+    h6{
+        font-size: 34px;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+    }
+    h3{
+        color: white;
+        word-spacing: 70px;
+    }
+            
+    p{
+        font-size: 24px;
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+    }
+            
+    form{
+        font-size: 20px;
+    }
+            
+    body{
+        background: linear-gradient(to right, #b387d3 0%,#f495a3 100%);
+    }
+    button, input{
+        color: #000;
+        background-color: #FFF;
+    }
+        </style>
+  </head>
+  <body>
+  <h1>Blobfish Support Group</h1>
+        <p>Welcome to the Nutrition Store! Here you can select what you would like to feed your sad blobfish with.</p>
+        <h3>FOOD DRINK</h3>
+        <form action="addnutrition" method="get">
+        <select name="i">
+            @for (int i = 0; i < Model.foodSelection.Count; i++)
+            {
+                <option value="@i">@Model.foodSelection[i]</option>
+            }
+
+        </select>
+        <select name="i2">
+            @for (int i = 0; i < Model.drinkSelection.Count; i++)
+            {
+                <option value="@i">@Model.drinkSelection[i]</option>
+            }
+
+        </select>
+        <button type="submit">Change diet!</button>
+    </form>
+    <form action="index" method="get">
+        <input type="submit" value="Back to blobfish">
+    </form>
+  </body>
+</html>
