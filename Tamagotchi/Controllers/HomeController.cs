@@ -71,18 +71,18 @@ namespace Tamagotchi.Controllers
 
         [HttpGet]
         [Route("nutritionStore")]
-        public IActionResult NutritionStore()
+        public IActionResult nutritionStore()
         {
             return View(blobfish);
         }
 
         [HttpGet]
-        [Route("addnutrition")]
-        public IActionResult AddNutrition(int i, int i2)
+        [Route("addNutrition")]
+        public IActionResult addNutrition(int i, int i2)
         {
             blobfish.AddFood(i);
             blobfish.AddDrink(i2);
-            return RedirectToAction("nutritionstore");
+            return RedirectToAction("nutritionStore");
         }
     }
 }
